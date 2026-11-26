@@ -316,6 +316,26 @@ footer a:hover{color:var(--fg)}
   .js .bar.hide{transform:translateY(110%)}
 }
 
+/* \00bc30\00acbd\00c74c\00c545 \00bc84\00d2bc (site/bgm.mp3 \00ac00 \00c788\00c744 \00b54c\00b9cc \00b4e4\00c5b4\00ac10) \002014 PC\00b294 \00ba38\00b9ac\00ae00, \00d734\00b300\00d3f0\00c740 \00d558\00b2e8 \00bb38\00c758 \00bc14 */
+.bgm{display:grid;place-items:center;flex:none;width:40px;height:40px;padding:0;border:1px solid var(--line-2);border-radius:10px;background:var(--card);color:var(--muted);cursor:pointer;transition:color .2s,background .2s,border-color .2s}
+.bgm:hover{color:var(--fg);background:var(--bg-2)}
+.bgm svg{width:18px;height:18px}
+.bgm .eq{display:none;align-items:flex-end;gap:3px;height:14px}
+.bgm .eq i{width:3px;border-radius:2px;background:currentColor;transform-origin:bottom;animation:eq 1.2s ease-in-out infinite}
+.bgm .eq i:nth-child(1){height:60%;animation-delay:-.4s}.bgm .eq i:nth-child(2){height:100%}.bgm .eq i:nth-child(3){height:45%;animation-delay:-.8s}
+@keyframes eq{0%,100%{transform:scaleY(.45)}50%{transform:scaleY(1)}}
+.bgm[aria-pressed="true"]{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 45%,var(--line-2))}
+.bgm[aria-pressed="true"] svg{display:none}
+.bgm[aria-pressed="true"] .eq{display:flex}
+@media(max-width:1000px){.site .bgm{margin-left:auto}.site .bgm:not([hidden]) + .btn{margin-left:0}}
+@media(max-width:760px){
+  .site .bgm{display:none}.site .bgm + .btn{margin-left:auto}
+  .bar.wb{display:flex;gap:10px}
+  .bar .bgm{width:50px;height:50px}
+  .bar .bgm svg{width:20px;height:20px}
+  .bar .bgm + .btn{flex:1;width:auto}
+}
+
 /* \00b4f1\00c7a5 \00d6a8\00acfc */
 .blur-in{animation:blurIn .9s var(--ease) both}
 @keyframes blurIn{from{opacity:0;filter:blur(10px);transform:translateY(12px)}to{opacity:1;filter:none;transform:none}}
@@ -447,7 +467,7 @@ footer a:hover{color:var(--fg)}
 <header class="site"><div class="wrap">
   <a class="logo" href="#top"><i aria-hidden="true"></i>&#xc774;&#xbca4;&#xd2b8;&#xd558;&#xb294; &#xb140;&#xc11d;&#xb4e4;</a>
   <nav class="menu" aria-label="&#xd398;&#xc774;&#xc9c0; &#xba54;&#xb274;"><a href="#mcs">&#xc0ac;&#xd68c;&#xc790;</a><a href="#videos">&#xd604;&#xc7a5; &#xc601;&#xc0c1;</a><a href="#process">&#xc9c4;&#xd589; &#xacfc;&#xc815;</a><a href="https://eventpeoples.github.io/plan.html">&#xc2dd;&#xc21c; &#xb9cc;&#xb4e4;&#xae30;</a><a href="https://eventpeoples.github.io/songs.html">&#xb178;&#xb798; &#xcd94;&#xcc9c;</a><a href="#faq">&#xc790;&#xc8fc; &#xbb3b;&#xb294; &#xc9c8;&#xbb38;</a></nav>
-  <a class="btn btn-primary" href="https://ig.me/m/eventpeoples" target="_blank" rel="noopener">&#xc608;&#xc57d; &#xbb38;&#xc758;</a>
+  <button type="button" class="bgm" aria-pressed="false" aria-label="&#xbc30;&#xacbd;&#xc74c;&#xc545; &#xcf1c;&#xae30;" title="&#xbc30;&#xacbd;&#xc74c;&#xc545;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span></button><a class="btn btn-primary" href="https://ig.me/m/eventpeoples" target="_blank" rel="noopener">&#xc608;&#xc57d; &#xbb38;&#xc758;</a>
   <button type="button" class="mtog" aria-expanded="false" aria-controls="mnav" aria-label="&#xba54;&#xb274; &#xc5f4;&#xae30;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 </div><nav class="mnav" id="mnav" aria-label="&#xd398;&#xc774;&#xc9c0; &#xba54;&#xb274;" hidden><a href="#mcs">&#xc0ac;&#xd68c;&#xc790;</a><a href="#videos">&#xd604;&#xc7a5; &#xc601;&#xc0c1;</a><a href="#process">&#xc9c4;&#xd589; &#xacfc;&#xc815;</a><a href="https://eventpeoples.github.io/plan.html">&#xc2dd;&#xc21c; &#xb9cc;&#xb4e4;&#xae30;</a><a href="https://eventpeoples.github.io/songs.html">&#xb178;&#xb798; &#xcd94;&#xcc9c;</a><a href="#faq">&#xc790;&#xc8fc; &#xbb3b;&#xb294; &#xc9c8;&#xbb38;</a></nav></header>
 <main id="top">
@@ -515,7 +535,8 @@ footer a:hover{color:var(--fg)}
 </div></section>
 </main>
 <footer><div class="wrap"><span>&#xa9; &#xc774;&#xbca4;&#xd2b8;&#xd558;&#xb294; &#xb140;&#xc11d;&#xb4e4; &#xb7; &#xb300;&#xad6c; &#xb7; &#xacbd;&#xbd81; &#xb7; &#xd3ec;&#xd56d;</span><a href="https://www.instagram.com/eventpeoples/" target="_blank" rel="noopener">Instagram @eventpeoples</a></div></footer>
-<div class="bar"><a class="btn btn-primary" href="https://ig.me/m/eventpeoples" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>&#xc608;&#xc57d; &#xb7; &#xc0c1;&#xb2f4; &#xbb38;&#xc758;</a></div>
+<div class="bar wb"><button type="button" class="bgm" aria-pressed="false" aria-label="&#xbc30;&#xacbd;&#xc74c;&#xc545; &#xcf1c;&#xae30;" title="&#xbc30;&#xacbd;&#xc74c;&#xc545;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span></button><a class="btn btn-primary" href="https://ig.me/m/eventpeoples" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>&#xc608;&#xc57d; &#xb7; &#xc0c1;&#xb2f4; &#xbb38;&#xc758;</a></div>
+<audio id="bgmA" src="bgm.mp3" preload="none" loop></audio>
 <script>
 (function(){
   var d=document, root=d.documentElement; root.classList.add('js');
@@ -528,6 +549,23 @@ footer a:hover{color:var(--fg)}
   if(mt&&mn){ var setM=function(o){ mn.hidden=!o; mt.setAttribute('aria-expanded',o?'true':'false'); mt.setAttribute('aria-label',o?'\uba54\ub274 \ub2eb\uae30':'\uba54\ub274 \uc5f4\uae30'); };
     mt.addEventListener('click',function(){ setM(mn.hidden); }); mn.addEventListener('click',function(e){ if(e.target.closest('a')) setM(false); });
     d.addEventListener('keydown',function(e){ if(e.key==='Escape') setM(false); }); }
+
+  // \ubc30\uacbd\uc74c\uc545: \uae30\ubcf8\uc740 \uaebc\uc9d0. \ubc84\ud2bc\uc744 \ub204\ub97c \ub54c\ub9cc \ubc18\ubcf5 \uc7ac\uc0dd\ud558\uace0, \ub2e4\ub978 \ud0ed\u00b7\uc571\uc73c\ub85c \uac00\uba74 \uba48\ucdc4\ub2e4\uac00 \ub3cc\uc544\uc624\uba74 \uc774\uc5b4\uc11c \uc7ac\uc0dd
+  // \uace1 \ud30c\uc77c \uc790\uccb4\ub97c \uc791\uac8c(-23 LUFS) \ub9cc\ub4e4\uc5b4 \ub460: \uc544\uc774\ud3f0\uc740 \uc790\ubc14\uc2a4\ud06c\ub9bd\ud2b8\ub85c \uc74c\ub7c9\uc744 \ubabb \ubc14\uafb8\uae30 \ub54c\ubb38
+  var au=d.getElementById('bgmA'), bb=d.querySelectorAll('.bgm');
+  if(au&&bb.length){
+    var want=false, fade=0;
+    var mark=function(on){ each('.bgm',function(b){ b.setAttribute('aria-pressed',on?'true':'false'); b.setAttribute('aria-label',on?'\ubc30\uacbd\uc74c\uc545 \ub044\uae30':'\ubc30\uacbd\uc74c\uc545 \ucf1c\uae30'); }); };
+    var ramp=function(to,ms,done){ clearInterval(fade); var from=au.volume, t0=Date.now();
+      if(reduce||!ms){ au.volume=to; if(done) done(); return; }
+      fade=setInterval(function(){ var k=Math.min(1,(Date.now()-t0)/ms); au.volume=from+(to-from)*k; if(k>=1){ clearInterval(fade); if(done) done(); } },40); };
+    var start=function(){ au.volume=0; var p=au.play(); var ok=function(){ ramp(1,1500); };
+      if(p&&p.then) p.then(ok).catch(function(){ want=false; mark(false); }); else ok(); };
+    var stop=function(){ ramp(0,500,function(){ au.pause(); }); };
+    each('.bgm',function(b){ b.addEventListener('click',function(){ want=!want; mark(want); if(want) start(); else stop(); }); });
+    au.addEventListener('error',function(){ want=false; mark(false); each('.bgm',function(b){ b.hidden=true; }); });
+    d.addEventListener('visibilitychange',function(){ if(!want) return; if(d.hidden){ clearInterval(fade); au.pause(); } else start(); });
+  }
 
   // \ud5e4\ub354: \uc2a4\ud06c\ub864\ud558\uba74 \uc544\ub798 \uc120 \ud45c\uc2dc
   var hd=d.querySelector('.site');
