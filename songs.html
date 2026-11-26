@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#FAFAF9" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#0D0C0B" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FAF6F0" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#170B0F" media="(prefers-color-scheme: dark)">
 <title>&#xc2dd;&#xc21c;&#xbcc4; &#xb178;&#xb798; &#xcd94;&#xcc9c; &#xb7; &#xc774;&#xbca4;&#xd2b8;&#xd558;&#xb294; &#xb140;&#xc11d;&#xb4e4;</title>
 <meta name="description" content="&#xc2e0;&#xb791; &#xc785;&#xc7a5;, &#xc2e0;&#xbd80; &#xc785;&#xc7a5;, &#xd589;&#xc9c4;, &#xc2dd;&#xc804;&#xb7;&#xc2dd;&#xc911;&#xc5d0; &#xb9ce;&#xc774; &#xc4f0;&#xb294; &#xb178;&#xb798; 154&#xace1;&#xacfc; &#xd558;&#xc774;&#xb77c;&#xc774;&#xd2b8; &#xad6c;&#xac04;.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&family=Nanum+Myeongjo:wght@700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap">
 <style>
 :root{
   --bg:#FAFAF9; --bg-2:#F2F1EF; --card:#FFFFFF; --fg:#1A1917; --muted:#68645F;
@@ -383,6 +383,102 @@ dialog.pv:focus{outline:none}
   #print .doc .seq tr{break-inside:avoid}
 }
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* \002500\002500\002500\002500\002500 v3 \00b178\00c640\00b974 \00c640\00c778 \00d14c\00b9c8 (theme.py) \002500\002500\002500\002500\002500 */
+:root{
+  --bg:#FAF6F0; --bg-2:#F2EAE0; --card:#FFFDFA; --fg:#2A1218; --muted:#75645F;
+  --line:#E7DBCD; --line-2:#D6C5B1; --accent:#8E2F45; --accent-soft:#F4E4E3; --on-accent:#FFFDFA;
+  --wine:#3A1520; --ivory:#F3ECE4; --champagne:#C9AA7C; --gold:#B08C5A; --gold-ink:#86673A; --btn:#3A1520; --on-btn:#F7F0E8;
+  --shadow:0 1px 2px rgba(58,21,32,.05),0 14px 34px -18px rgba(58,21,32,.28);
+  --serif:"Nanum Myeongjo","Noto Serif KR","AppleMyungjo","Batang",serif;
+  --latin:"Cormorant Garamond","Nanum Myeongjo","Noto Serif KR",serif;
+  --mono:var(--sans); --r:4px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#170B0F; --bg-2:#23131A; --card:#1E0F15; --fg:#F3ECE4; --muted:#B9A79E;
+    --line:#35202A; --line-2:#4C3039; --accent:#E3A0AE; --accent-soft:#3A1822; --on-accent:#1E0D13;
+    --gold:#C9AA7C; --gold-ink:#C9AA7C; --btn:#F3ECE4; --on-btn:#3A1520;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 14px 36px -16px rgba(0,0,0,.8); color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#170B0F; --bg-2:#23131A; --card:#1E0F15; --fg:#F3ECE4; --muted:#B9A79E;
+  --line:#35202A; --line-2:#4C3039; --accent:#E3A0AE; --accent-soft:#3A1822; --on-accent:#1E0D13;
+  --gold:#C9AA7C; --gold-ink:#C9AA7C; --btn:#F3ECE4; --on-btn:#3A1520;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 14px 36px -16px rgba(0,0,0,.8); color-scheme:dark;
+}
+::selection{background:var(--champagne);color:var(--wine)}
+
+/* \00ae00\00af34: \00c81c\00baa9\0000b7\00c774\00b984\0000b7\00d6c4\00ae30\00b294 \00ba85\00c870, \00bcf8\00bb38\00c740 \00adf8\00b300\00b85c \00ace0\00b515 */
+h1,h2,h3,.logo,.pick b,.quote q{font-family:var(--serif)}
+.hero h1,.phead h1{font-weight:700;letter-spacing:-.035em;line-height:1.26}
+.sh h2,.cta h2{font-weight:700;letter-spacing:-.03em;line-height:1.32}
+h3,.steps h3,.check h3,.ask h3,.plan-cta h3{font-weight:800;letter-spacing:-.02em}
+.steps h3{font-size:19px}
+.nb{display:inline-block}
+.side h3{font-weight:800;letter-spacing:-.02em}
+.pick b{font-weight:800;letter-spacing:-.01em}
+.logo{font-size:17px;font-weight:800;letter-spacing:-.01em;gap:11px}
+.logo i{width:7px;height:7px;border-radius:0;background:var(--gold);box-shadow:none;transform:rotate(45deg)}
+
+/* \00c601\00bb38 \00c791\00c740 \00c81c\00baa9: \00ae30\00c6b8\00c778 Cormorant + \00ae08\00c0c9 \00ac00\00b294 \00c120 */
+.mono{font-size:12.5px;letter-spacing:.03em;text-transform:none;font-variant-numeric:tabular-nums}
+.sh .mono,.phead .mono,.mq-head .mono{font-family:var(--latin);font-style:italic;font-weight:500;font-size:20px;line-height:1.2;letter-spacing:.01em;color:var(--gold-ink);gap:12px}
+.sh .mono::before,.phead .mono::before{width:28px;height:1px;border-radius:0;background:var(--gold)}
+
+/* \00bc84\00d2bc */
+.btn{border-radius:3px;letter-spacing:.01em}
+.btn-sm{border-radius:3px}
+.btn-primary{background:var(--btn);color:var(--on-btn)}
+.btn-primary:hover{opacity:1;background:color-mix(in srgb,var(--btn) 86%,var(--champagne))}
+.btn-outline:hover{background:var(--card);border-color:var(--gold)}
+
+/* \00ccab \00d654\00ba74 */
+.hero::before{display:none}
+.badge{height:auto;padding:0;border:0;border-radius:0;background:none;gap:12px;font-size:14px;letter-spacing:.05em;color:var(--gold-ink)}
+.badge i{width:6px;height:6px;border-radius:0;background:var(--gold);transform:rotate(45deg)}
+.badge i::after{display:none}
+.stats{border-top-color:var(--line-2)}
+.stats b{font-family:var(--latin);font-weight:600;font-size:46px;letter-spacing:0;line-height:1;font-variant-numeric:lining-nums}
+.stats b small{font-family:var(--serif);font-size:16px;font-weight:700;margin-left:4px;letter-spacing:-.01em}
+.stats b.tx{white-space:nowrap;letter-spacing:.01em}
+@media(max-width:900px){.stats b.tx{font-size:34px;line-height:46px}}
+@media(max-width:760px){.stats b{font-size:36px}.stats b small{font-size:14.5px}.stats b.tx{font-size:27px;line-height:36px}}
+
+/* \00baa8\00c11c\00b9ac: \00b465\00adfc \00ce74\00b4dc \00b300\00c2e0 \00bc18\00b4ef\00d55c \00c885\00c774 \00b290\00b08c */
+.qk,.mq,.rc .th,.seg,.song .sth,.fl input,.fl select,.fl textarea,.ask textarea,.notice,#songs .notice,.mtog,.bgm,.empty,.empty-v,.mcur,.mopt,.mopts,.player iframe,.pv-ask textarea,.pv-note,.step button,.float{border-radius:3px}
+.seg button,.seg .ind,.menu a,.rc .tag,.check li,.song .yt,.song .sm .used,.song .sm .hot{border-radius:2px}
+.check li{background:transparent;border:1px solid var(--line-2)}
+.rc .tag{background:rgba(42,18,24,.74)}
+@media(max-width:560px){.mopt{border-radius:0}}
+dialog.pv{border-radius:6px}
+/* \00c2dd\00c21c \00b9cc\00b4e4\00ae30 \0000b7 \00b178\00b798 \00cd94\00cc9c \00d398\00c774\00c9c0\00c758 \00ce78\00acfc \00ce69 */
+.fl input:not([type=checkbox]),.fl select,.fl textarea,.blk,.hd,.ic,.pv-img img{border-radius:3px}
+.sg .pill,.pill,.sg .yt,.mood,.prep label,.toast button{border-radius:2px}
+:focus-visible{border-radius:3px}
+
+/* \00c0ac\00d68c\00c790 \00c5bc\00ad74: \00b9ac\00d50c\00b81b\00acfc \00ac19\00c740 \00c774\00c911 \00ae08\00d14c */
+.pick .pa{box-shadow:0 0 0 3px var(--card),0 0 0 4px var(--gold)}
+.pick.on .pa{box-shadow:0 0 0 3px var(--card),0 0 0 5px var(--gold)}
+
+/* \00c9c4\00d589 \00acfc\00c815: \00b9ac\00d50c\00b81b\00acfc \00ac19\00c740 \00b85c\00b9c8 \00c22b\00c790 */
+.steps li::before{content:counter(s,lower-roman) ".";font-family:var(--latin);font-style:italic;font-weight:500;font-size:25px;line-height:1;color:var(--gold-ink);margin-bottom:22px}
+@media(max-width:520px){.steps li::before{margin:1px 0 0}}
+
+/* \00d6c4\00ae30 */
+.quote{padding:8px 0 8px 24px;border-left:1px solid var(--gold);border-radius:0;background:none}
+.quote q{font-weight:700;letter-spacing:-.02em;line-height:1.6;text-wrap:balance}
+
+/* \00b9c8\00c9c0\00b9c9 \00bb38\00c758 \00ce78: \00b9ac\00d50c\00b81b \00d45c\00c9c0\00cc98\00b7fc \00c640\00c778 \00bc14\00d0d5\00c5d0 \00ae08\00c0c9 \00d14c\00b450\00b9ac */
+.cta{border-radius:4px;background:var(--wine);color:var(--ivory)}
+.cta::before{inset:10px;opacity:1;background:none;border:1px solid color-mix(in srgb,var(--champagne) 55%,transparent);-webkit-mask-image:none;mask-image:none}
+.cta p{color:color-mix(in srgb,var(--ivory) 76%,transparent)}
+.cta .handle{font-family:var(--sans);color:var(--ivory);text-decoration-color:var(--champagne)}
+.cta .btn-primary{background:var(--ivory);color:var(--wine)}
+.cta .btn-primary:hover{background:#FFFDFA}
+.cta .btn-outline{background:transparent;color:var(--ivory);border-color:color-mix(in srgb,var(--champagne) 70%,transparent)}
+.cta .btn-outline:hover{background:color-mix(in srgb,var(--ivory) 8%,transparent);border-color:var(--champagne)}
 </style>
 <link rel="canonical" href="https://eventpeoples.github.io/songs.html"><meta property="og:type" content="website"><meta property="og:url" content="https://eventpeoples.github.io/songs.html"><meta property="og:title" content="&#xc2dd;&#xc21c;&#xbcc4; &#xb178;&#xb798; &#xcd94;&#xcc9c; &#xb7; &#xc774;&#xbca4;&#xd2b8;&#xd558;&#xb294; &#xb140;&#xc11d;&#xb4e4;"><meta property="og:description" content="&#xc2e0;&#xb791; &#xc785;&#xc7a5;, &#xc2e0;&#xbd80; &#xc785;&#xc7a5;, &#xd589;&#xc9c4;, &#xc2dd;&#xc804;&#xb7;&#xc2dd;&#xc911;&#xc5d0; &#xb9ce;&#xc774; &#xc4f0;&#xb294; &#xb178;&#xb798; 154&#xace1;&#xacfc; &#xd558;&#xc774;&#xb77c;&#xc774;&#xd2b8; &#xad6c;&#xac04;."><meta property="og:image" content="https://eventpeoples.github.io/og.jpg"><meta name="twitter:card" content="summary_large_image"></head><body>
 <header class="site"><div class="wrap">
